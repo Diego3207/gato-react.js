@@ -1,13 +1,13 @@
 import './Square.css';
 
-const Square = ({ value, onClick }) => {
+const Square = ({ value, onClick, turn }) => {
 
     const handleClick = () => {
-        value === null && onClick();
+        (turn !== null && value === null) && onClick();
     }
 
     return (
-        <div className="square">
+        <div className="square" onClick={() => handleClick()}>
 
         </div>
     );

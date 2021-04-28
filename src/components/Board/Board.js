@@ -1,11 +1,12 @@
 import Square from "../Square/Square";
 import './Board.css';
 
-const Board = ({squares, onClick}) => {
+const Board = ({squares, onClick, turn}) => {
 
     const createSquares = values => (
         values.map( value => (
             <Square 
+                turn= {turn}
                 onClick={() => onClick(value)}
                 value={squares[value]}
                 key={`square_${value}`}
