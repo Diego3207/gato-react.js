@@ -22,6 +22,12 @@ const App = () => {
     O: 0,
   });
 
+  const reset = () => {
+    setTurn('X');
+    setSquares(Array(9).fill(null));
+    setWiningSquares([]);
+  }
+
   const checkForWinner = newSquares => {
     for(let i = 0; i < winningPositions.length; i++) {
       const [a,b,c] = winningPositions[i];
@@ -58,6 +64,7 @@ const App = () => {
     }
 
     setWiningSquares(winningPositions);
+    setTimeout(reset, 2000);
   }
 
   return (
