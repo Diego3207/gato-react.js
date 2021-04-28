@@ -1,4 +1,1 @@
-<<<<<<< HEAD
 Hola como 
-=======
->>>>>>> parent of 995c21f (Modificación)
