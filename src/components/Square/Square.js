@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import './Square.css';
 
 const Square = ({ value, onClick, turn }) => {
@@ -6,8 +7,13 @@ const Square = ({ value, onClick, turn }) => {
         (turn !== null && value === null) && onClick();
     }
 
+    let squareClass = classNames({
+        square: true, 
+        [`square--${value}`]: value !== null,
+    })
+
     return (
-        <div className="square" onClick={() => handleClick()}>
+        <div className={squareClass} onClick={() => handleClick()}>
 
         </div>
     );
