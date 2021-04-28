@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import Board from './components/Board/Board';
+import ScoreBoard from './components/ScoreBoard/ScoreBoard';
 
 const winningPositions = [
   [0, 1, 2],
@@ -70,6 +71,7 @@ const App = () => {
   return (
     <div className="container">
       <Board winningSquares={winingSquares} turn={turn} squares={squares} onClick={handleClick}/>
+      <ScoreBoard scoreO={score.O} scoreX={score.X} />
     </div>
   );
 }
