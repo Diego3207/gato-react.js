@@ -57,12 +57,12 @@ const App = () => {
       })
     }
 
-
+    setWiningSquares(winningPositions);
   }
 
   return (
     <div className="container">
-      <Board turn={turn} squares={squares} onClick={handleClick}/>
+      <Board winningSquares={winingSquares} turn={turn} squares={squares} onClick={handleClick}/>
     </div>
   );
 }
